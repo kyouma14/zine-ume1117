@@ -19,11 +19,18 @@ for contour in contours:
     if len(approx)==3:
         cv2.putText(img1,"triangle",(x1-10,y1-10),cv2.FONT_HERSHEY_SIMPLEX,2,(255,0,0),5)
         cv2.circle(img1,(x1,y1),20,(255,255,0),-1)
+    elif:len(approx)==4:
+            cv2.putText(img1,"square/rectangle",(x1-10,y1-10),cv2.FONT_HERSHEY_SIMPLEX,2,(255,0,0),5)
+            cv2.circle(img1,(x1,y1),20,(255,255,0),-1)
     else:
         cv2.putText(img1,'Ellipse', (x1-10,y1-10),cv2.FONT_HERSHEY_SIMPLEX,2,(255,0,0),5)
         cv2.circle(img1,(x1,y1),20,(255,255,0),-1)
-    img1=cv2.line(img1,(x1,y1), (x1,y1), (255,0,120),10)
+        img1=cv2.line(img1,(x1,y1), (x1,y1), (255,0,120),10)
     cv2.imshow('image', img1)
     cv2.waitKey(0)
     cv2.destroyAllWindows()
+            
+       
+           
+   
         
